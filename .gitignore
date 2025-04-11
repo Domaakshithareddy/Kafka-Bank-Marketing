@@ -1,2 +1,3 @@
-streaming/kafka_env/*
-streaming/__pycache__
+__pycache__
+bank_model.pkl
+scaler.pkl
