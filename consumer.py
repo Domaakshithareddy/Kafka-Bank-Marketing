@@ -1,9 +1,9 @@
 from kafka import KafkaConsumer
 import json
-from predict_model import predict  # real model
+from backend.predict_model import predict  # real model
 
 consumer = KafkaConsumer(
-    'bank_customers',
+    'bank_data',
     bootstrap_servers='localhost:9092',
     value_deserializer=lambda m: json.loads(m.decode('utf-8'))
 )

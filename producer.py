@@ -41,6 +41,6 @@ def generate_customer_data():
 
 while True:
     data = generate_customer_data()
-    producer.send('bank_customers', value=data)
+    producer.send('bank_data', value=data)
     print(f"Sending: {data}")
     time.sleep(1)

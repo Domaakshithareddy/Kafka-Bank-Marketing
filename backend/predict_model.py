@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import joblib
 
-model = joblib.load('bank_model.pkl')
-scaler = joblib.load('scaler.pkl')
+model = joblib.load("backend/bank_model.pkl")
+scaler = joblib.load("backend/scaler.pkl")
 
 # Feature columns used in training (same as model.py)
 FEATURE_COLUMNS = ['age', 'job', 'marital', 'education', 'default', 'balance',
@@ -33,4 +33,3 @@ def predict(data_dict):
     prediction = model.predict(processed_data)[0]
     probability = model.predict_proba(processed_data)[0][1]  # Probability for class "1" (yes)
     return ("yes (1)" if prediction == 1 else "no (0)", probability)
-

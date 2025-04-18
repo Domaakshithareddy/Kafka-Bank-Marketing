@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Marketing Prediction</title>
+</head>
+<body>
+    <h2>Enter Customer Info</h2>
+    <form action="/predict" method="post">
+        Age: <input type="number" name="age"><br>
+        Job: <input type="text" name="job"><br>
+        Marital: <input type="text" name="marital"><br>
+        Education: <input type="text" name="education"><br>
+        Default: <input type="text" name="default"><br>
+        Balance: <input type="number" name="balance"><br>
+        Housing: <input type="text" name="housing"><br>
+        Loan: <input type="text" name="loan"><br>
+        Contact: <input type="text" name="contact"><br>
+        Day: <input type="number" name="day"><br>
+        Month: <input type="text" name="month"><br>
+        Duration: <input type="number" name="duration"><br>
+        Campaign: <input type="number" name="campaign"><br>
+        Pdays: <input type="number" name="pdays"><br>
+        Previous: <input type="number" name="previous"><br>
+        Poutcome: <input type="text" name="poutcome"><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+        <h3>Prediction: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
