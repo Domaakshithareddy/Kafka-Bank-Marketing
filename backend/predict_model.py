@@ -70,4 +70,4 @@ async def make_prediction(
     prediction_label, probability_value = predict(form_data)
     return {"prediction": prediction_label, "probability": f"{probability_value:.2f}"}
 
-# To run this: uvicorn your_script_name:app --reload
+# To run this: uvicorn backend.main:app --reload
