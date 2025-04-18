@@ -9,7 +9,7 @@ producer = KafkaProducer(
 )
 
 # Sample values for random generation
-jobs = ['admin.', 'technician', 'services', 'management', 'unemployed']
+jobs = ['admin.', 'technician', 'services', 'management', 'unemployed', 'blue-collar', 'self-employed', 'housemaid', 'entrepreneur']
 maritals = ['married', 'single', 'divorced']
 educations = ['primary', 'secondary', 'tertiary']
 defaults = ['yes', 'no']
