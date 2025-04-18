@@ -14,5 +14,3 @@ for message in consumer:
     print(f"Received message: {data}")
     print(f'Predicted Class: {prediction}') 
     print(f'Probability of Conversion: {probability:.2f}')
-
-# run consumer.py to simulate real time data streaming and give prediction

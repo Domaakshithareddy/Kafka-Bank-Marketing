@@ -44,5 +44,3 @@ while True:
     producer.send('bank_data', value=data)
     print(f"Sending: {data}")
     time.sleep(1)
-
-# run producer.py to generate data

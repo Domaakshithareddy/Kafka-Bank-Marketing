@@ -35,5 +35,3 @@ def train_and_save_model():
 if __name__ == "__main__":
     if not os.path.exists(MODEL_PATH):
         train_and_save_model()
-        
-# run model.py only once
