@@ -140,12 +140,10 @@
         <div class="content">
             <form action="/predict" method="post">
                 <div class="user-details">
-                    <!-- Input for Age -->
                     <div class="input-box">
                         <span class="details">Age</span>
                         <input type="number" name="age" placeholder="Enter your age" required>
                     </div>
-                    <!-- Input for Job -->
                     <div class="input-box">
                         <span class="details">Job</span>
                         <select name="job" id="job" required>
@@ -160,7 +158,6 @@
                             <option value="entrepreneur">Entrepreneur</option>
                         </select>
                     </div>
-                    <!-- Input for Marital -->
                     <div class="input-box">
                         <span class="details">Marital</span>
                         <select name="marital" id="marital" required>
@@ -170,7 +167,6 @@
                             <option value="divorced">Divorced</option>
                         </select>                        
                     </div>
-                    <!-- Input for Education -->
                     <div class="input-box">
                         <span class="details">Education</span>
                         <select name="education" id="education" required>
@@ -180,7 +176,6 @@
                             <option value="tertiary">Tertiary</option>
                         </select>                        
                     </div>
-                    <!-- Input for Default -->
                     <div class="input-box">
                         <span class="details">Default</span>
                         <select name="default" id="default" required>
@@ -189,12 +184,10 @@
                             <option value="no">No</option>
                         </select>                        
                     </div>
-                    <!-- Input for Balance -->
                     <div class="input-box">
                         <span class="details">Balance</span>
                         <input type="number" name="balance" placeholder="Enter balance" required>
                     </div>
-                    <!-- Input for Housing -->
                     <div class="input-box">
                         <span class="details">Housing</span>
                         <select name="housing" id="housing" required>
@@ -203,7 +196,6 @@
                             <option value="no">No</option>
                         </select>                        
                     </div>
-                    <!-- Input for Loan -->
                     <div class="input-box">
                         <span class="details">Loan</span>
                         <select name="loan" id="loan" required>
@@ -212,7 +204,6 @@
                             <option value="no">No</option>
                         </select>                        
                     </div>
-                    <!-- Input for Contact -->
                     <div class="input-box">
                         <span class="details">Contact</span>
                         <select name="contact" id="contact" required>
@@ -221,12 +212,10 @@
                             <option value="telephone">Telephone</option>
                         </select>                        
                     </div>
-                    <!-- Input for Day -->
                     <div class="input-box">
                         <span class="details">Day</span>
                         <input type="number" name="day" placeholder="Enter day" required>
                     </div>
-                    <!-- Input for Month -->
                     <div class="input-box">
                         <span class="details">Month</span>
                         <select name="month" id="month" required>
@@ -245,27 +234,22 @@
                             <option value="dec">December</option>
                         </select>                        
                     </div>
-                    <!-- Input for Duration -->
                     <div class="input-box">
                         <span class="details">Duration</span>
                         <input type="number" name="duration" placeholder="Enter duration" required>
                     </div>
-                    <!-- Input for Campaign -->
                     <div class="input-box">
                         <span class="details">Campaign</span>
                         <input type="number" name="campaign" placeholder="Enter campaign count" required>
                     </div>
-                    <!-- Input for Pdays -->
                     <div class="input-box">
                         <span class="details">Pdays</span>
                         <input type="number" name="pdays" placeholder="Enter pdays" required>
                     </div>
-                    <!-- Input for Previous -->
                     <div class="input-box">
                         <span class="details">Previous</span>
                         <input type="number" name="previous" placeholder="Enter previous count" required>
                     </div>
-                    <!-- Input for Poutcome -->
                     <div class="input-box">
                         <span class="details">Poutcome</span>
                         <select name="poutcome" id="poutcome" required>
@@ -276,7 +260,6 @@
                         </select>                        
                     </div>
                 </div>
-                <!-- Submit button -->
                 <div class="button">
                     <input type="submit" value="Predict">
                 </div>
@@ -290,7 +273,6 @@
     </div>
 
     <script>
-        // Basic client-side validation
         document.querySelector('form').addEventListener('submit', function(e) {
             let inputs = document.querySelectorAll('input[required], select[required]');
             for (let input of inputs) {

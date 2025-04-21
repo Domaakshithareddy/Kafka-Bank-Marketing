@@ -7,7 +7,6 @@ producer = KafkaProducer(
     bootstrap_servers='localhost:9092',
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
-
 # Sample values for random generation
 jobs = ['admin.', 'technician', 'services', 'management', 'unemployed', 'blue-collar', 'self-employed', 'housemaid', 'entrepreneur']
 maritals = ['married', 'single', 'divorced']
@@ -38,7 +37,6 @@ def generate_customer_data():
         "previous": random.randint(0, 5),
         "poutcome": random.choice(poutcomes)
     }
-
 while True:
     data = generate_customer_data()
     producer.send('bank_data', value=data)
