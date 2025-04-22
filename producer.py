@@ -8,15 +8,15 @@ producer = KafkaProducer(
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
 # Sample values for random generation
-jobs = ['admin.', 'technician', 'services', 'management', 'unemployed', 'blue-collar', 'self-employed', 'housemaid', 'entrepreneur']
+jobs = ['admin.', 'technician', 'services', 'management', 'unemployed', 'blue-collar', 'housemaid', 'entrepreneur']
 maritals = ['married', 'single', 'divorced']
 educations = ['primary', 'secondary', 'tertiary']
-defaults = ['yes', 'no']
+defaults = ['no']
 housings = ['yes', 'no']
 loans = ['yes', 'no']
-contacts = ['cellular', 'telephone']
+contacts = ['unknown']
 months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
-poutcomes = ['unknown', 'failure', 'success']
+poutcomes = ['unknown', 'failure', 'success', 'other']
 
 def generate_customer_data():
     return {
@@ -32,8 +32,8 @@ def generate_customer_data():
         "day": random.randint(1, 31),
         "month": random.choice(months),
         "duration": random.randint(0, 1000),
-        "campaign": random.randint(1, 10),
-        "pdays": random.randint(-1, 100),
+        "campaign": random.randint(1, 15),
+        "pdays": random.randint(-1, 300),
         "previous": random.randint(0, 5),
         "poutcome": random.choice(poutcomes)
     }
